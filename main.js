@@ -1,5 +1,5 @@
 
-
+const ulLi = document.getElementById('list')
 const myList = document.getElementsByTagName("li");
 
 for(let i = 0; i < myList.length; i++){
@@ -13,12 +13,27 @@ for(let i = 0; i < myList.length; i++){
 // } 
 
 // live element
-const ulLi = document.getElementById('list')
+const listItems = document.getElementsByTagName('li')
+const listsItems = document.querySelectorAll('li')
 const addBtn = document.getElementById('add-btn')
 function addButton() {
     const li = document.createElement('li')
     li.textContent = 'piano'
     ulLi.appendChild(li)
-    console.log(ulLi);
+   
+    console.log("live:",listItems.length);
+    // console.log("static:",listsItems.length);
 }
 addBtn.addEventListener('click', addButton)
+
+// static element
+const node = document.getElementById('list')
+if (node.parentElement) {
+    node.parentElement.style.color = "blue";
+  }
+  if (node.parentNode) {
+    // remove a node from the tree, unless
+    // it's not in the tree already
+    node.parentNode.removeChild(node);
+  }
+  
