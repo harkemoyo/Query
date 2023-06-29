@@ -21,19 +21,19 @@ function addButton() {
     li.textContent = 'piano'
     ulLi.appendChild(li)
    
-    console.log("live:",listItems.length);
-    // console.log("static:",listsItems.length);
+    // console.log("live:",listItems.length);
+    console.log("static:",listsItems.length);
 }
 addBtn.addEventListener('click', addButton)
 
 // static element
 const node = document.getElementById('list')
-if (node.parentElement) {
-    node.parentElement.style.color = "blue";
+if (node.parentNode) {
+    node.parentNode.style.color = "blue";
   }
   if (node.parentNode) {
     // remove a node from the tree, unless
     // it's not in the tree already
-    node.parentNode.removeChild(node);
+    // node.parentNode.removeChild(node);
   }
   
